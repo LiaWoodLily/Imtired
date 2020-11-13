@@ -38,10 +38,16 @@ text-transform: uppercase;
   border-color:  #c23c24; 
   border-width: 4px;
 }
-.btn-primary:hover{
+.btn-primary:not(:disabled):not(.disabled):active{
   background-color: #c23c24;
   border-color:  #c23c24; 
   border-width: 4px;
+}
+.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus{
+  box-shadow: none;
+}
+.btn-primary.focus, .btn-primary:focus{
+  box-shadow: none;
 }
 
 .btn-xl{
